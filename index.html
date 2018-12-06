@@ -13,8 +13,31 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class='col-sm-6'>
-				<input type='text' class="form-control" id='datetimepicker1' />
+			<div class='col-md-4'>
+				<h1>Date and Time</h1>
+
+				<div class="form-group">
+					<div class='input-group date'>
+						<input type='text' class="form-control" id='datetimepicker1' />
+					</div>
+				</div>
+			</div>
+			<div class='col-md-4'>
+				<h1>Only Time</h1>
+				<div class="form-group">
+					<div class='input-group date'>
+						<input type='text' class="form-control" id='datetimepicker2' />
+					</div>
+				</div>
+			</div>
+
+			<div class='col-md-4'>
+				<h1>Only Date</h1>
+				<div class="form-group">
+					<div class='input-group date'>
+						<input type='text' class="form-control" id='datetimepicker3' />
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -27,12 +50,26 @@
 	<script type="text/javascript">
 		$(function () {
 			$('#datetimepicker1').datetimepicker({
+				locale: 'es',
 				format: "DD-MM-YYYY hh:mm A",
 				widgetPositioning: {
 					horizontal: 'left',
 					vertical: 'bottom'
 				}
 			});
+			$('#datetimepicker2').datetimepicker({
+				locale: 'es',
+				format: 'LT'
+			});
+			$('#datetimepicker3').datetimepicker({
+				locale: 'es',
+				format: "DD-MM-YYYY",
+				widgetPositioning: {
+					horizontal: 'left',
+					vertical: 'bottom'
+				}
+			});
+
 		});
 	</script>
 </body>
